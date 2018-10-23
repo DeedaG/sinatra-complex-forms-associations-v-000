@@ -27,8 +27,7 @@ class PetsController < ApplicationController
 
   post '/pets/:id' do
     @pet = Pet.find(params[:id])
-    @pet.update(params[:pet])
-
+    
     if !params[:pet].keys.include?("owner_ids")
     params[:pet]["owner_ids"] = []
     end
