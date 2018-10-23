@@ -33,7 +33,7 @@ class PetsController < ApplicationController
     end
 
     if !params["owner"]["name"].empty?
-      Owner.id.name
+      Owner.ids.name
     end
     redirect "pets/#{@pet.id}"
   end
